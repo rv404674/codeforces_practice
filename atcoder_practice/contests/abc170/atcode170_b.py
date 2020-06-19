@@ -27,6 +27,19 @@ def proc():
     return "No"
 
 
+# after seeing editorial
+def proc_optimized():
+    x,y = map(int, readline().rstrip().split())
+    # if x=3, there are (x+1) solutions
+    # (0,3), (1,2), (2,1), (3,0)
+
+    result = 'No'
+    for a in range(x+1):
+        b = x-a
+        if 2*x + 4*b == y:
+            result = 'Yes'
+
+    return result
 
 #for _ in range(int(readline())):
 print(proc())
