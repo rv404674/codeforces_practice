@@ -33,6 +33,16 @@ def proc():
     
 # atcoder editorial
 # simple implementation - O(n2), but no memory
+def atcoder_proc():
+    x,n = map(int, readline().rstrip().split())
+    a = list(map(int, readline().rstrip().split()))
+
+    for i in range(x+1):
+        for k in [-1,1]:
+            a = x + i*k
+            if x.count(a) == 0:
+                print(a)
+                exit(0)
 
 
 #for _ in range(int(readline())):
